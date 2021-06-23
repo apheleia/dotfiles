@@ -65,6 +65,7 @@
         - geoclue2
         - git-delta
         - gnome-keyring
+        - grim
         - i3lock
         - i3status
         - ImageMagick
@@ -91,6 +92,7 @@
         - procs
         - python
         - python3-tkinter
+        - qt5-qtwayland
         - qt5-qtwebengine-freeworld
         - qutebrowser
         - ranger
@@ -100,13 +102,21 @@
         - roboto-fontface-fonts
         - rofi
         - seahorse
+        - slurp
+        - sway
+        - swaylock
+        - sway-systemd
         - tealdeer
         - thunar
         - tig
         - tmux
+        - waybar
+        - wl-clipboard
+        - wofi
         - xautolock
         - xbacklight
         - xclip
+        - xdg-desktop-portal-wlr
         - xdotool
         - xinput
         - xmodmap
@@ -115,6 +125,7 @@
         - zoxide
         - zsh
       state: latest
+      install_weak_deps: no
     tags: packages
   - name: Ensure redshift has access to geoclue
     blockinfile:
@@ -251,8 +262,11 @@
       - { src: "ranger", dest: ".config/ranger" }
       - { src: "rofi", dest: ".config/rofi" }
       - { src: "starship/starship.toml", dest: ".config/starship.toml" }
+      - { src: "sway", dest: ".config/sway" }
       - { src: "tmux/.tmux.conf", dest: ".tmux.conf" }
       - { src: "vim/.vimrc", dest: ".vimrc" }
+      - { src: "waybar", dest: ".config/waybar" }
+      - { src: "wofi", dest: ".config/wofi" }
       - { src: "zsh/.zshrc", dest: ".zshrc" }
     tags: symlinks
   - name: Symlinkg kakounes original autoload file
